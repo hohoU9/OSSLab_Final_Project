@@ -17,13 +17,19 @@ Then, the bot start to keep watching the stock list in a real time and send an e
 
 ## How do I get started?
 
-1. First, Go to the link [iffft](https://ifttt.com/) and sing up or sign in.
+1. Go to the link [iffft](https://ifttt.com/) and sing up or sign in.
 
 2. Make the service for taking some notifications from our stock bot.
-  1. Click the 'This' and find and make the 'webhooks'
+  1. Click the 'This' and find and make the 'webhooks' (The event name is used in the third process)
   
-  2. Click the 'That' and find and make the email servie as below. 
+  2. Click the 'That' and find and make the email servie as below. (You have to confirm you email address in the process)
    <center><img src="email.png" width="600" height="600"></center>
+  
+  3. Go to the link [webhook](https://ifttt.com/maker_webhooks) and click the documentation
+  
+  4. Copy and paste the url address into target_url of 'config.py'
+   <center><img src="email.png" width="600" height="600"></center>
+  
   
 
 ## Where can I get more help, if I need it?
