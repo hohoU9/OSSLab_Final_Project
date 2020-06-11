@@ -15,7 +15,9 @@ In that case, this project might be helpful. You just type the stock lists that 
 Then, the bot start to keep watching the stock list in a real time and send an email to an user when the stock is price is over the expected value.
 
 
-## How do I get started?
+## Getting Started!
+
+0. Clone this git repository.
 
 1. Go to the link [iffft](https://ifttt.com/) and sing up or sign in.
 
@@ -42,5 +44,8 @@ Then, the bot start to keep watching the stock list in a real time and send an e
   
   
 
-## Where can I get more help, if I need it?
+## You need get some help?
+
+Please email me hgu.thinker@gmail.com when you need some help. Or give some comments on issues
+
 
