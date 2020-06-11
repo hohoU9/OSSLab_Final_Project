@@ -27,8 +27,15 @@ Then, the bot start to keep watching the stock list in a real time and send an e
   
   3. Go to the link [webhook](https://ifttt.com/maker_webhooks) and click the documentation
   
-  4. Copy and paste the url address into target_url of 'config.py'
-   <center><img src="email.png" width="600" height="600"></center>
+  4. Type your event name and copy and paste the url address into target_url of 'config.py'
+   <center><img src="copy.PNG" width="600" height="600"></center>
+   
+  5. Execute the program with the stock that you want to watch.
+  (three arguments are needed: stock name, target price, time interval of watching stock)
+  
+      ```
+      python3 stock.py 삼성전자 52000 2
+      ```
   
   
 
