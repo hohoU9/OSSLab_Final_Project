@@ -22,8 +22,8 @@ Then, the bot start to keep watching the stock list in a real time and send an e
 2. Make the service for taking some notifications from our stock bot.
   1. Click the 'This' and find and make the 'webhooks'
   
-  2. Click the 'That' and find and make the 'email'
-    *
+  2. Click the 'That' and find and make the email servie as below. 
+    ![ex_screenshot](./email.png)
   
 
 3. 
