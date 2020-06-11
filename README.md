@@ -23,15 +23,8 @@ Then, the bot start to keep watching the stock list in a real time and send an e
   1. Click the 'This' and find and make the 'webhooks'
   
   2. Click the 'That' and find and make the email servie as below. 
-    ![ex_screenshot](./email.png)
+    <img src="./email.png" width="100%" height="100%">
   
-
-3. 
-
-
-
-
-
 
 ## Where can I get more help, if I need it?
 
