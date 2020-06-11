@@ -32,8 +32,10 @@ Then, the bot start to keep watching the stock list in a real time and send an e
    
    
   5. Execute the program with the stock name and the target price so the bot gives you notification when the current price is over the        target price.(You have to sell or buy the stock)
-    <br> Our project provides only korea stock market information and the stock name must be matched with the KRX's offical stock name.
-    <br>(three arguments are needed: stock name, target price, time interval of watching stock)
+  
+     Our project provides only korea stock market information and the stock name must be matched with the KRX's offical stock name.
+     (three arguments are needed: stock name, target price, time interval of watching stock)
+    
       ```
       python3 stock.py 삼성전자 52000 2
       ```
