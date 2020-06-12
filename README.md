@@ -34,12 +34,12 @@ The information is crawled from the naver web server.
   1. Click the 'This' and find and make the 'webhooks' (The event name is used in the third process)
   
   2. Click the 'That' and find and make the email servie as below. (You have to confirm you email address in the process)
-     <center><img src="email.png" width="600" height="600"></center>
+     <center><img src="/img/email.png" width="600" height="600"></center>
   
   3. Go to the link [webhook](https://ifttt.com/maker_webhooks) and click the documentation
   
   4. Type your event name and copy and paste the url address into target_url of 'config.py'
-    <center><img src="url.png" width="500" height="500"></center>
+    <center><img src="/img/url.png" width="500" height="500"></center>
    
    
   5. Execute the program with the stock name and the target price so the bot gives you notification when the current price is over the        target price.(You have to sell or buy the stock)
