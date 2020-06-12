@@ -7,7 +7,7 @@
 When a user want to keep watching some stock price with the expected price(target price), just use this bot and take some notifications using your email.
 
 ## Tools
-I implement this project using python web crawler and the open soruce named IFTTT for handling the event and sending a notification.
+I develop this project using python web crawler and the open soruce named IFTTT for handling the event and sending a notification.
 The information is crawled from the naver web server.
 
 ## Why is this project useful?
