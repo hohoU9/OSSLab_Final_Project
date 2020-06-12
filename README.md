@@ -1,6 +1,9 @@
 ## This is the final project of OSS Lab(HGU, 2020-1)
 **Project name: Stock price teller bot**
 
+
+**Video Link: [Project presentation video](https://youtu.be/GYCX6G9wAZw)**
+
 ## What does this project do?
 
 **Stock price teller bot** is an automatic tool for keep tracking the stock price that a user want to watch in a real time.
@@ -55,5 +58,7 @@ The information is crawled from the naver web server.
 Please email me hgu.thinker@gmail.com when you need some help. Or give some comments on issues
 
 
+## References
+https://sonsofaureus.wordpress.com/2014/05/29/ifttt-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90-%EC%A0%95%EB%A6%AC/
 
-
+https://wendys.tistory.com/173
