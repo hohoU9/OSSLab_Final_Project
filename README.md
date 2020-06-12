@@ -6,9 +6,6 @@
 **Stock price teller bot** is an automatic tool for keep tracking the stock price that a user want to watch in a real time.
 When a user want to keep watching some stock price with the expected price(target price), just use this bot and take some notifications using your email.
 
-## Tools
-I develop this project using python web crawler and the open soruce named IFTTT for handling the event and sending a notification.
-The information is crawled from the naver web server.
 
 ## Why is this project useful?
 In these days, there are many platforms and applications providing stock makret information. 
@@ -17,6 +14,11 @@ However, it is very complicated for the beginners to use the functions in that a
 As a result, the beginners get tired of using the applications.
 In that case, this project might be helpful. You just type the stock lists that you are interested in. 
 Then, the bot start to keep watching the stock list in a real time and send an email to an user when the stock is price is over the expected value.
+
+
+## Tools
+I develop this project using python web crawler and the open soruce named IFTTT for handling the event and sending a notification.
+The information is crawled from the naver web server.
 
 
 ## Getting Started!
