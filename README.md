@@ -3,7 +3,7 @@
 
 ## What does this project do?
 
-**Stock price teller bot** is an automatic tool for keep tracking the stock price that a user want in a real time.
+**Stock price teller bot** is an automatic tool for keep tracking the stock price that a user want to watch in a real time.
 When a user want to keep watching some stock price with the expected price(target price), just use this bot and take some notifications using your email.
 
 ## Tools
