@@ -18,7 +18,7 @@ def getPrice(url):
 	return now_price
 
 def get_code(df, name):
-    if(code_df['name']==name).any():
+    if(df['name']==name).any():
         code = df.query("name=='{}'".format(name))['code'].to_string(index=False)
         code = code.strip()
         return code
@@ -44,40 +44,44 @@ def compareValue(target_url, stock_name, target_price, current_price):
 		time.sleep(15)
 		return
 
-parser = argparse.ArgumentParser()
-parser.add_argument('name', type=str,
-            help="What is the name of stock?")
-parser.add_argument('target_price', type=int,
-                help="What is the target price?")
-args = parser.parse_args()
-code_name = args.name
-target_price = args.target_price
-code_df = pd.read_html('http://kind.krx.co.kr/corpgeneral/corpList.do?method=download', header=0)[0]
+def main():
+	parser = argparse.ArgumentParser()
+	parser.add_argument('name', type=str,
+	            help="What is the name of stock?")
+	parser.add_argument('target_price', type=int,
+	                help="What is the target price?")
+	args = parser.parse_args()
+	code_name = args.name
+	target_price = args.target_price
+	code_df = pd.read_html('http://kind.krx.co.kr/corpgeneral/corpList.do?method=download', header=0)[0]
+	
+	code_df = code_df[['회사명', '종목코드']]
+	code_df.head()
+	code_df = code_df.rename(columns={'회사명': 'name', '종목코드': 'code'})
+	code_df.code = code_df.code.map('{:06d}'.format)
+	
+	code = get_code(code_df, code_name)
+	target_url = config.target_url
+	url = "https://finance.naver.com/item/main.nhn?code={}".format(code)
+	os.environ['TZ'] = 'Asia/Seoul'
+	t = time.localtime()
+	
+	while(t.tm_hour<=15 and t.tm_hour>=9):
+	    if(t.tm_hour == 15):
+	        while(t.tm_min < 30):
+	            price = getPrice(url)
+	            showResult(price)
+	            compareValue(target_url, code_name, target_price, price)
+	            if(t.tm_min >= 30):
+	                print("Market is closed.\n")
+	                break
+	    else:
+	        price = getPrice(url)
+	        showResult(price)
+	        compareValue(target_url, code_name, target_price, price)
 
-code_df = code_df[['회사명', '종목코드']]
-code_df.head()
-code_df = code_df.rename(columns={'회사명': 'name', '종목코드': 'code'})
-code_df.code = code_df.code.map('{:06d}'.format)
+	print("Stock Market is closed.\n")
+	print("Retry on weekday, 9:00 AM ~ 03:30 PM")
 
-code = get_code(code_df, code_name)
-target_url = config.target_url
-url = "https://finance.naver.com/item/main.nhn?code={}".format(code)
-
-
-
-os.environ['TZ'] = 'Asia/Seoul'
-t = time.localtime()
-
-while(t.tm_hour<=15 and t.tm_hour>=9):
-    if(t.tm_hour == 15):
-        while(t.tm_min < 30):
-            price = getPrice(url)
-            showResult(price)
-            compareValue(target_url, code_name, target_price, price)
-            if(t.tm_min >= 30):
-                print("Market is closed.\n")
-                break
-    else:
-        price = getPrice(url)
-        showResult(price)
-        compareValue(target_url, code_name, target_price, price)
+if __name__ == "__main__":
+	main()
