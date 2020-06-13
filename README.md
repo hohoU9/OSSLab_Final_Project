@@ -45,10 +45,10 @@ The information is crawled from the naver web server.
   5. Execute the program with the stock name and the target price so the bot gives you notification when the current price is over the        target price.(You have to sell or buy the stock)
   
      Our project provides only korea stock market information and the stock name must be matched with the KRX's offical stock name.
-     (three arguments are needed: stock name, target price, time interval of watching stock)
+     (two arguments are needed: stock name, target price)
     
       ```
-      python3 stock.py 삼성전자 52000 2
+      python3 stock.py 삼성전자 52000
       ```
   
   
